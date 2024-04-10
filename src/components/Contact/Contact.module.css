@@ -1,0 +1,21 @@
+.number,
+.name {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.name {
+  margin-bottom: 8px;
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+
+  height: 27px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
