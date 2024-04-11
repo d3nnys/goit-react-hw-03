@@ -1,8 +1,14 @@
 .page {
+  display: grid;
+  place-items: center;
+  gap: 30px;
+
   padding: 50px 0;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .title {
   text-align: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
