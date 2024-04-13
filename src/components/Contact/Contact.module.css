@@ -13,6 +13,7 @@
   display: grid;
   place-items: center;
 
+  margin-left: auto;
   height: 31px;
   padding: 5px 10px;
   border-radius: 7px;
