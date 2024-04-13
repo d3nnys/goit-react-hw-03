@@ -12,7 +12,9 @@ export default function App() {
   const [contact, setContact] = useState(() => {
     const savedContact = window.localStorage.getItem('added-contact');
 
-    return savedContact !== null ? JSON.parse(savedContact) : userData;
+    return savedContact !== null && savedContact !== '[]'
+      ? JSON.parse(savedContact)
+      : userData;
   });
 
   useEffect(() => {
