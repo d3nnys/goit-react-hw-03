@@ -22,3 +22,7 @@ img {
   height: auto;
   object-fit: cover;
 }
+
+button {
+  cursor: pointer;
+}

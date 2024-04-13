@@ -15,7 +15,12 @@
 
   height: 31px;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 7px;
   border: 1px solid black;
   cursor: pointer;
+
+  background-color: #6262ff;
+  color: white;
+  border: transparent;
+  outline: none;
 }

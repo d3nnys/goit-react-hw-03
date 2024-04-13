@@ -1,0 +1,14 @@
+.text {
+  margin-bottom: 3px;
+}
+
+.input {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 4px 10px;
+  outline: none;
+}
+
+.wrapper {
+  margin-bottom: 30px;
+}
