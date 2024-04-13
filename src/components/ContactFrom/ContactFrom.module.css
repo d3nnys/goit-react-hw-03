@@ -1,0 +1,44 @@
+.error {
+  font-size: 13px;
+  color: crimson;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form {
+  display: grid;
+  place-items: center;
+  gap: 15px;
+
+  width: 300px;
+  border: 1px solid black;
+  padding: 30px 15px;
+  border-radius: 8px;
+}
+
+.input {
+  padding: 4px 10px;
+  outline: transparent;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.wrapper:has(> input:valid) {
+  & .input {
+    /* border: 1px solid rgb(63, 145, 63); */
+  }
+}
+
+.wrapper:has(> input:valid) {
+  & .input {
+    border: (1px solid crimson);
+  }
+}
+
+:is(.input:invalid) {
+  border: 1px solid crimson;
+}
