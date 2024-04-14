@@ -1,4 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 import * as Yup from 'yup';
 import css from './ContactForm.module.css';
 
@@ -13,11 +14,16 @@ const UserSchema = Yup.object().shape({
 });
 
 const initialValues = {
-  name: '',
-  number: '',
+  name: 'Denys',
+  number: '123-45-67',
 };
 
 export default function ContactForm({ onAdd }) {
+  const [parent] = useAutoAnimate({
+    easing: 'linear',
+    duration: 300,
+  });
+
   const handleSubmit = (values, actions) => {
     onAdd(values);
     actions.resetForm();
@@ -30,12 +36,12 @@ export default function ContactForm({ onAdd }) {
       onSubmit={handleSubmit}
     >
       <Form className={css.form}>
-        <div className={css.wrapper}>
+        <div ref={parent} className={css.wrapper}>
           <label htmlFor="name">Name</label>
           <Field className={css.input} type="text" name="name" />
           <ErrorMessage className={css.error} name="name" component="span" />
         </div>
-        <div className={css.wrapper}>
+        <div ref={parent} className={css.wrapper}>
           <label htmlFor="number">Number</label>
           <Field
             className={css.input}
