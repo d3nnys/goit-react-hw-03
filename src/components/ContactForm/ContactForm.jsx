@@ -37,7 +37,12 @@ export default function ContactForm({ onAdd }) {
         </div>
         <div className={css.wrapper}>
           <label htmlFor="number">Number</label>
-          <Field className={css.input} type="text" name="number" />
+          <Field
+            className={css.input}
+            type="text"
+            name="number"
+            placeholder="XXX-XX-XX"
+          />
           <ErrorMessage className={css.error} name="number" component="span" />
         </div>
         <button className={css.formButton} type="submit">
