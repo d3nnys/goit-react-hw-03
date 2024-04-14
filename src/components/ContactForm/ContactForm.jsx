@@ -14,8 +14,8 @@ const UserSchema = Yup.object().shape({
 });
 
 const initialValues = {
-  name: 'Denys',
-  number: '123-45-67',
+  name: '',
+  number: '',
 };
 
 export default function ContactForm({ onAdd }) {
