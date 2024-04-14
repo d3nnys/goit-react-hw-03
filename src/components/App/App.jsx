@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
+import { nanoid } from 'nanoid';
 import userData from '../../../userData.json';
 import ContactList from '../ContactList/ContactList';
 import SearchBox from '../SearchBox/SearchBox';
-import ContactForm from '../ContactFrom/ContactFrom';
-import { nanoid } from 'nanoid';
-import * as Yup from 'yup';
+import ContactForm from '../ContactForm/ContactForm';
 import css from './App.module.css';
 
 export default function App() {
@@ -37,29 +36,10 @@ export default function App() {
     item.name.toLowerCase().includes(filter.toLowerCase())
   );
 
-  const UserSchema = Yup.object().shape({
-    name: Yup.string()
-      .min(3, 'Too short')
-      .max(50, 'Too long')
-      .required('This field is required'),
-    number: Yup.string()
-      .matches(/^\d{3}-\d{2}-\d{2}$/, 'Invalid number format')
-      .required('This field is required'),
-  });
-
-  const initialValues = {
-    name: '',
-    number: '',
-  };
-
   return (
     <section className={css.page}>
       <h1 className={css.title}>Phonebook</h1>
-      <ContactForm
-        onAdd={addTContact}
-        validation={UserSchema}
-        initial={initialValues}
-      />
+      <ContactForm onAdd={addTContact} />
       <SearchBox value={filter} onFilter={setFilter} />
       <ContactList data={filtredItems} onDelete={deleteItem} />
     </section>
