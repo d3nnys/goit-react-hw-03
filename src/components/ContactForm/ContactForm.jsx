@@ -33,12 +33,12 @@ export default function ContactForm({ onAdd }) {
         <div className={css.wrapper}>
           <label htmlFor="name">Name</label>
           <Field className={css.input} type="text" name="name" />
-          <ErrorMessage className={css.error} name="name" as="span" />
+          <ErrorMessage className={css.error} name="name" component="span" />
         </div>
         <div className={css.wrapper}>
           <label htmlFor="number">Number</label>
           <Field className={css.input} type="text" name="number" />
-          <ErrorMessage className={css.error} name="number" as="span" />
+          <ErrorMessage className={css.error} name="number" component="span" />
         </div>
         <button className={css.formButton} type="submit">
           Add contact
